@@ -1,0 +1,138 @@
+﻿$size-zero: 0px;
+$size-main: 10px;
+$size-width: 100;
+$color-orange: #ff6a00;
+$color-gradient: radial-gradient(#e5dc87, #97b676, #d17f44);
+$color-red: #ff0000;
+$color-blue: #228be3;
+$position: center;
+$position-left: left;
+$font-main-slabo: 'Slabo 27px';
+$font-main: Pacifico;
+$font-main-text: Roboto Mono;
+$font-main-pattaya: Pattaya;
+$font-second: sans-serif;
+$color-dark: black;
+$color-gray: gray;
+
+body {
+    padding: $size-zero;
+    margin: $size-zero;
+    color: $color-dark;
+}
+
+.grid {
+    display: grid;
+}
+
+header.grid {
+    min-height: $size-width+vh;
+    background-size: cover;
+    background-image: url('../img_origin/header.jpg');
+    position: relative;
+    background-position: $position;
+    align-content: $position;
+    align-items: $position;
+
+    &::before {
+        content: "";
+        background-color: $color-gray;
+        top: $size-zero;
+        bottom: $size-zero;
+        left: $size-zero;
+        right: $size-zero;
+        opacity: 0.15;
+        position: absolute;
+    }
+}
+
+.header-bar {
+    background-color: $color-dark;
+    grid-template-columns: repeat(3,1fr);
+    min-height: $size-width/5+vh;
+    background-size: cover;
+    background-position: $position;
+    text-align: $position;
+    font-size: $size-main*2;
+    color: lighten($color-dark, 100);
+    position: relative;
+    transition: all 0.75s ease;
+    cursor: pointer;
+    font-family: $font-second;
+    padding: $size-main;
+
+    &:hover {
+        color: darken($color-orange, 0.2);
+
+        &::before {
+            opacity: 0.5;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: $size-zero;
+        left: $size-zero;
+        right: $size-zero;
+        bottom: $size-zero;
+        background-image: $color-gradient;
+        opacity: 0.4;
+        transition: opacity 1s ease;
+    }
+}
+
+.header-bar-center {
+    font-size: $size-main*3;
+    font-family: $font-main-slabo;
+    text-align: center;
+    position: relative;
+}
+
+.header-bar-right {
+    text-align: center;
+    position: relative;
+    padding-top: $size-main*3;
+}
+
+li {
+    list-style-type: none;
+}
+
+.header-bar-left {
+    position: relative;
+    text-align: $position;
+    padding-top: $size-main*4;
+}
+
+.header-container {
+    z-index: 1;
+    text-align: $position;
+    padding: $size-main*5 $size-main*2;
+}
+
+@import "buttons";
+@import "section-about";
+@import "section-form";
+//footer//
+.main-footer {
+    padding: $size-main*3 $size-zero $size-main*3 $size-zero;
+    background-color: darken($color-gray, 20);
+    text-align: $position;
+    color: lighten($color-dark, 65);
+    font-family: $font-main-text;
+}
+
+.footer {
+    &-logo span {
+        font-size: $size-main*2.8;
+        letter-spacing: $size-main/5;
+        line-height: 1.5;
+        display: block;
+
+        span {
+            font-size: $size-main*2;
+            letter-spacing: $size-main/10;
+        }
+    }
+}

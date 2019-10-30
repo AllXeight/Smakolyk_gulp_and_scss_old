@@ -1,0 +1,64 @@
+﻿.btn {
+    display: inline-block;
+    border: $size-main/5 solid $color-dark;
+    padding: $size-main*1.5 $size-main*5;
+    border-radius: $size-main;
+    width: $size-main*15;
+    height: $size-main*13;
+    cursor: pointer;
+    margin: $size-main*3;
+    opacity: 0.95;
+    transition: all 0.6s ease;
+
+    &-bans-sausages {
+        background: url("../img_origin/Хот_Дог.jpg") no-repeat center;
+        background-size: cover;
+        box-shadow: 3px 3px 3px darken($color-dark, 3%);
+
+        &:hover {
+            background-image: darken($color-dark, 10%);
+            box-shadow: 3px 3px 5px darken($color-gray, 10%);
+        }
+    }
+
+    &-sausages {
+        background: url("../img_origin/sausage_header.jpg") no-repeat center;
+        background-size: cover;
+        box-shadow: 3px 3px 3px darken($color-dark, 3%);
+
+        &:hover {
+            background-image: darken($color-dark, 10%);
+            box-shadow: 3px 3px 5px darken($color-gray, 10%);
+        }
+    }
+
+    &-buns {
+        background: url("../img_origin/baget_french_dog.jpg") no-repeat center;
+        background-size: cover;
+        box-shadow: 3px 3px 3px darken($color-dark, 3%);
+
+        &:hover {
+            background-image: darken($color-dark, 10%);
+            box-shadow: 3px 3px 5px darken($color-gray, 10%);
+        }
+    }
+
+    &-css {
+        display: inline-block;
+        border: none;
+        color: lighten($color-dark, 100);
+        text-decoration: none;
+        letter-spacing: 1.5;
+        border-radius: $size-main/2;
+        text-align: $position;
+        cursor: pointer;
+        font-family: $font-main-text;
+        background-color: $color-blue;
+        box-shadow: 2px 2px 3px darken($color-blue, 0.2);
+
+        &:hover {
+            background-color: darken($color-blue, 0.2);
+            box-shadow: 3px 3px 7px darken($color-blue, 40);
+        }
+    }
+}

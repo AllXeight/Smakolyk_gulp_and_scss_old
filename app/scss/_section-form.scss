@@ -1,0 +1,10 @@
+﻿.container {
+    max-width: $size-main*12+px;
+    margin: auto;
+    padding: $size-zero $size-main*2;
+}
+
+.form-section {
+    padding: $size-main*3 $size-zero;
+    background-color: darken($color-gray, 20%);
+}
